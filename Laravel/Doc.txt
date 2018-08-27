@@ -1,0 +1,10 @@
+# Add https://github.com/caffeinated/modules
+
+# Controller < ApiController
+# Services < Validations of data
+
+#Add ['middleware' => ['BrokerAuth']
+#Broker Api  in project\app\Http\Kernel.php
+   'BrokerAuth' => \App\Modules\Broker\Http\Middleware\BrokerAuth::class,
+#And add file in: project\app\Modules\Broker\Http\Middleware\BrokerAuth.php  - create by command
+

@@ -1,0 +1,15 @@
+# Evitar que se indexe los archivos de una carpeta por defecto
+Options -Indexes  
+
+##https force
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule ^test/([^/\.]+)/([^/\.]+)/?$ test.php?param_one=$1&param_two=$2 [L,QSA]
+</IfModule>
