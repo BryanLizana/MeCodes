@@ -8,7 +8,7 @@ Creación de un entorno virtual para la simulación de servidores linux (Todo en
 * File Puphpet
 * Bash Git - https://git-scm.com/downloads
 ## File Puphpet
-* Go to : https://puphpet.com/
+* Go to : <a href="https://puphpet.com/" target="__black">https://puphpet.com/</a> 
 * Select Distro:CentOS 7 x64
 * Internal Identifier: debe ser diferente de los que ya tienes, si sale error se cambia en `D:\\LOCALDEV\\vagrantup\\TestVM\\puphpet\\config.yaml`
 * IP Address: (Default, cambiar si es necesario) `192.168.56.101`
@@ -47,3 +47,8 @@ Creación de un entorno virtual para la simulación de servidores linux (Todo en
 * (?) Problema de sync con el box:  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 * Para ver el problema más a detalles: ` **sudo** systemctl status httpd.service`
 
+## Install Node in server
+* curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+* sudo yum -y install nodejs
+* (Activar puertos - Optional) sudo iptables -I INPUT -p tcp --dport 3030 -j ACCEPT
+* (Activar puertos - Optional) sudo service iptables save
