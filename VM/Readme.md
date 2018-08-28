@@ -50,5 +50,5 @@ Creación de un entorno virtual para la simulación de servidores linux (Todo en
 ## Install Node in server
 * curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 * sudo yum -y install nodejs
-* (Activar puertos - Optional) sudo iptables -I INPUT -p tcp --dport 3030 -j ACCEPT
-* (Activar puertos - Optional) sudo service iptables save
+* (Activar puertos - Optional) `sudo iptables -I INPUT -p tcp --dport 3030 -j ACCEPT`
+* (Activar puertos - Optional) `sudo service iptables save`
