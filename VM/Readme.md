@@ -35,7 +35,7 @@ Creación de un entorno virtual para la simulación de servidores linux (Todo en
 * Run `sudo yum install php`
 * Run `sudo yum install httpd`
 * Run `sudo service httpd start`
-* (Optional, si ocurre problemas con session) Run `chmod 477 /var/lib/php/session/`  
+* (Optional, si ocurre problemas con session) Run `chmod 477 /var/lib/php/session/*`  
 * (Optional, si ocurre problemas con MysqlAdmin) Run `sudo yum install php-mbstring.x86_64` 
 
 
