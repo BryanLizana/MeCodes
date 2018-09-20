@@ -43,7 +43,7 @@ Creación de un entorno virtual para la simulación de servidores linux (Todo en
 * Windows hots virtual : `C:\WINDOWS\system32\drivers\etc\hosts`
 * Linux `sudo vim /etc/hosts`
 * Para evitar problemas de dominio (Intentar llmar aun virtual hosts de mismo server-local pero da error) Añadir el hots virtual también en el server (here: `sudo vim /etc/hosts`)
-* (?) Problemas con laravel de permisos: `sudo vim  /etc/httpd/conf/httpd.conf`  (para tema de permisos, que el user es vagrant pero se quiere crear con data-www o algo así)
+* (?) Problemas con laravel de permisos: `sudo vim  /etc/httpd/conf/httpd.conf`  ( se necesita cambiar el User 'www-data'  por 'vagrant', Group queda como 'www-data') 
 * (?) Problema de sync con el box:  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 * Para ver el problema más a detalles: ` **sudo** systemctl status httpd.service`
 
