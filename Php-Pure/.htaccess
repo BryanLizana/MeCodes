@@ -13,3 +13,10 @@ RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 	RewriteEngine On
 	RewriteRule ^test/([^/\.]+)/([^/\.]+)/?$ test.php?param_one=$1&param_two=$2 [L,QSA]
 </IfModule>
+
+
+#protect DEV
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /var/www/devs/.htpasswd
+Require valid-user
