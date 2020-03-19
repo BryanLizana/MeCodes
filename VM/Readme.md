@@ -46,6 +46,7 @@ Creación de un entorno virtual para la simulación de servidores linux (Todo en
 * (?) Problemas con laravel de permisos: `sudo vim  /etc/httpd/conf/httpd.conf`  ( se necesita cambiar el User 'www-data'  por 'vagrant', Group queda como 'www-data') 
 * (?) Problema de sync con el box:  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 * Para ver el problema más a detalles: ` **sudo** systemctl status httpd.service`
+* Al cambiar vagrant user, se tiene que eliminar los archivos de la carpeta session. rm y listo
 
 ## Install Node in server
 * curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
